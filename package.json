@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Data Centric Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/siobhanohanlon/DataCentricProject.git"
+  },
+  "author": "Siobhan O Hanlon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siobhanohanlon/DataCentricProject/issues"
+  },
+  "homepage": "https://github.com/siobhanohanlon/DataCentricProject#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.2",
+    "node": "^19.3.0",
+    "promise-mysql": "^5.2.0"
+  }
+}

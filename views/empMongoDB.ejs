@@ -1,0 +1,39 @@
+<h1>MongoDB Employees</h1>
+
+<!-- CSS -->
+<style>
+    table,th,td {
+        border: 2px solid black;
+    }
+
+    th,td {
+        padding: 5px;
+    }
+</style>
+
+<table>
+    <!-- Table Headings -->
+    <th>Employee ID</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+    <th>Delete</th>
+
+    </tr>
+    <!-- List out MongoDB Employees and their data -->
+    <% mongoDBList.forEach((mongoDBList)=>{ %>
+        <tr>
+            <td><%= mongoDBList._id %></td>
+            <td><%= mongoDBList.phone %></td>
+            <td><%= mongoDBList.email %></td>
+            <td>
+                <!-- Delete Employee-->
+                <a href="/employeesMongoDB/delete/<%= mongoDBList._id %>">
+                    <p type="submit">Delete</p>
+                </a>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<br>
+<button onclick="window.location.href='http://localhost:300/';">Home</button>

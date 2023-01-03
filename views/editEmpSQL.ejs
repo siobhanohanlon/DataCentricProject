@@ -1,0 +1,52 @@
+<body>
+    <h1>Update/Edit Employee</h1>
+    <!-- Rules of Editing Employees  -->
+    <ul>
+        <li>Employee ID is not Editable.</li>
+        <li>Name should be a Minimum of 5 Characters.</li>
+        <li>Role should be either Manager or Employee.</li>
+        <li>Salary must be greater than 0.</li>
+    </ul>
+
+<form href="http://localhost:3000/employees/edit/<%= updateEmp[0].eid %>" method="POST">
+
+    <!-- You Can't Change this, but it displays -->
+    <div><b>
+            <label padding-right="150px">Employee ID:</label>
+            <input type="text" readonly="true" name="eid" value="<%= updateEmp[0].eid%>" required></input>
+    </div><br>
+
+    <!-- Needs to be atleast 5 Characters -->
+    <div><b>
+            <label>Employee Name:</label></b>
+        <input type="text" name="ename" value="<%= updateEmp[0].ename %>" minlength="5" required></input>
+    </div><br>
+
+    <!-- Shows Previous and gives 2 Options -->
+    <div><b><label for="role">Role:</label></b>
+        <select id="role" name="role" required>
+            <option value="Manager">Manager</option>
+            <option value="Employee">Employee</option>
+            <option value="<%= updateEmp[0].role %>" selected>
+                Previous: <%= updateEmp[0].role %>
+            </option>
+        </select>
+    </div><br>
+
+    <!-- Must be over 0 -->
+    <div><b><label>Salary:</label></b>
+        <input type="number" name="salary" value="<%= updateEmp[0].salary %>" min="0.01" step=".01" required></input>
+    </div><br>
+
+    <!-- Submit Updated Employee -->
+    <div>
+        <input type="submit" value="Update">
+    </div><br>
+</form>
+
+<!-- Other Pages -->
+<br>
+<button onclick="window.location.href='http://localhost:3000/';">Home</button>
+<button onclick="window.location.href='http://localhost:3000/employees';">Employees</button>
+
+</body>

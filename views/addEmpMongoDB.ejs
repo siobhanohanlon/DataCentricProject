@@ -1,0 +1,32 @@
+<body>
+    <h1>Add Employee</h1>
+    <!-- Rules of Editing Employees  -->
+    <ul>
+        <li>Employee ID must be 4 Characters.</li>
+        <li>Phone # must be greater than 5 Numbers.</li>
+        <li>Email must be Valid.</li>
+    </ul>
+
+    <!--Form has all input validation-->
+    <form action="/employeesMongoDB/add" method="POST">
+        <!-- Must be 4 Characters -->
+        <label>Employee ID:</label>
+        <input type="text" name="_id" minlength="4" maxlength="4" required>
+        
+        <!-- Must shave 5 Characters -->
+        <label>Phone Number:</label>
+        <input type="number" name="phone" min="9999" required>
+        
+        <!-- Must be Valid Email -->
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <button onclick="window.location.href='http://localhost:3000/';">Home</button>
+    <br>
+    <button onclick="window.location.href='http://localhost:3000/empMongoDB';">List of Employees (MongoDB)</button>
+</body>

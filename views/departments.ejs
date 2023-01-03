@@ -1,0 +1,36 @@
+<h1>Departments</h1>
+
+<!-- CSS -->
+<style>
+    table,th,td {
+        border: 2px solid black;
+    }
+
+    th,td {
+        padding: 5px;
+    }
+</style>
+
+<table>
+    <!-- Table Headings -->
+    <th>Department ID</th>
+    <th>Name</th>
+    <th>Budget</th>
+    <th>Location</th>
+    <th>Delete</th>
+    </tr>
+
+    <!-- List out Departments and their Data -->
+    <% depList.forEach((depList)=>{ %>
+        <tr>
+            <td><%= depList.did %></td>
+            <td><%= depList.dname %></td>
+            <td><%= depList.lid %></td>
+            <td><%= depList.budget %></td>
+            <!-- Delete Department -->
+            <td><a href="/department/delete/<%= depList.did %>"><p type="submit">Delete</p></a></td>
+        </tr><% }) %>
+</table>
+
+<br>
+<button onclick="window.location.href='http://localhost:3000/';">Home</button>
